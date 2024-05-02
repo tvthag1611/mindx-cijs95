@@ -1,0 +1,11 @@
+Tạo file utils gồm 2 hàm:
+- findIndexInArray(arr, value)
+    + arr là một mảng số nguyên
+    + value là một số nguyên
+    + hàm trả về vị trí index của value trong mảng arr, nếu value không có trong mảng thì trả về "Không tìm thấy"
+
+- objectToString(obj)
+    + obj là một object có hai key là name, age 
+    + hàm trả về chuỗi có dạng "Bạn A 30 tuổi"
+
+Tạo file lesson1 import 2 hàm trên và sử dụng với data tự tạo ra.
