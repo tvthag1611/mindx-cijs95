@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
+import { useState } from 'react';
 import './Card.css'
 
 const Card = (props) => {
-    
-    const cardItem = props.item;
+    const {list, setList, item, index} = props;
+
+    const [name, setName] = useState(item.name);
 
     const getColorByArrtribute = (attribute) => {
         switch (attribute) {
@@ -59,13 +61,13 @@ const Card = (props) => {
     
     return (
         <div className='card'>
-            <img className='card-image' src={cardItem.image} alt={cardItem.name} />
+            <img className='card-image' src={item.image} alt={item.name} />
             <div className='card-info'>
-                <p className='card-no'>#{cardItem.no}</p>
-                <h2 className='card-name'>{cardItem.name}</h2>
+                <p className='card-no'>#{item.no}</p>
+                <h2 className='card-name'>{item.name}</h2>
                 <div className='card-attribute'>
                     {
-                        cardItem.arr.map((item, index) => {
+                        item.arr.map((item, index) => {
                             return (
                                 <div
                                 className='card-attribute-item'
@@ -78,6 +80,16 @@ const Card = (props) => {
                         })
                     }
                 </div>
+                <hr />
+                <input type='text' placeholder='Ten' className='card-input' value={name} onChange={
+                    (e) => {
+                        setName(e.target.value)
+                    }
+                }/>
+                <button className='card-button' onClick={() => {
+                    list[index].name = name;
+                    setList([...list]);
+                }}>Thay đổi</button>
             </div>
         </div>
     )

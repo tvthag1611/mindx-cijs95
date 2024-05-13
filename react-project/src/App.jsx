@@ -1,5 +1,6 @@
 import Card from './Card.jsx'
 import './App.css'
+import { useState } from 'react'
 
 function App() {
 
@@ -78,11 +79,27 @@ function App() {
     },
   ]
 
+  const [list, setList] = useState(cardList)
+
+  console.log(list)
+
+  // const arr = [
+  //   <CardABC item={cardList[0]}/>,
+  //   <CardABC item={cardList[0]}/>,
+  //   <CardABC item={cardList[0]}/>,
+  //   <CardABC item={cardList[0]}/>,
+  //   <CardABC item={cardList[0]}/>,
+  //   <CardABC item={cardList[0]}/>,
+  //   <CardABC item={cardList[0]}/>,
+  //   <CardABC item={cardList[0]}/>,
+  //   <CardABC item={cardList[0]}/>,
+  // ]
+
   return (
     <div className='app'>
       {
-        cardList.map((card, index) => {
-          return <Card item={card} key={index} />
+        list.map((card, index) => {
+          return <Card item={card} key={index} index={index} list={list} setList={setList} />
         })
       }
     </div>
