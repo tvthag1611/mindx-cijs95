@@ -1,0 +1,5 @@
+- Chưa giống design lắm
+- Chưa biết chia component
+- Xử lý chọn với props và state hơi cồng kềnh
+
+6

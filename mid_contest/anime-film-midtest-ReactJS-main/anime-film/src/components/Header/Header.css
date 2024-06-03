@@ -1,0 +1,39 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.07em;
+    text-align: left;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.home,
+.list-anime {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.07em;
+    text-align: left;
+    color: #868686;
+    cursor: pointer;
+}
+
+input {
+    width: Fixed (374.58px)px;
+    height: Hug (48px)px;
+    padding: 8px 100px 8px 18px;
+    gap: 10px;
+    opacity: 0px;
+    background-color: #374151;
+    font-family: poppins;
+    border: none;
+    border-radius: 20px;
+    color: #868686;
+}

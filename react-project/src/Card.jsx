@@ -1,18 +1,16 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Card.css";
 
-const Card = (props) => {
-  const {
-    item,
-    index,
-    setIsOpen,
-    getNameCard,
-    getIndexCard1234567,
-    list,
-    setList,
-  } = props;
-
+const Card = ({
+  item,
+  index,
+  setIsOpen,
+  getNameCard,
+  getIndexCard1234567,
+  list,
+  setList,
+}) => {
   const getColorByArrtribute = (attribute) => {
     switch (attribute) {
       case "Grass":
@@ -59,14 +57,21 @@ const Card = (props) => {
     setList(newList);
   };
 
+  const navigate = useNavigate();
+
   return (
-    <div className="card">
+    <div
+      className="card"
+      onClick={() => {
+        navigate(`/pokemons/${item.no}`);
+      }}
+    >
       <img className="card-image" src={item.image} alt={item.name} />
       <div className="card-info">
         <p className="card-no">#{item.no}</p>
         <h2 className="card-name">{item.name}</h2>
         <div className="card-attribute">
-          {item.arr.map((item, index) => {
+          {item.arr?.map((item, index) => {
             return (
               <div
                 className="card-attribute-item"

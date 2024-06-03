@@ -1,0 +1,7 @@
+- Còn một vài điểm nhỏ để giống design
+- Có chia component
+- Sử dụng được props và state để thực hiện tích chọn
+- Login hiển thị chưa đúng lắm
+- Viết style inline (không tốt)
+
+7

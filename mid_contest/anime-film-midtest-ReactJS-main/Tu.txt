@@ -1,0 +1,12 @@
+- Chia được thành ra các components
+- Giống design
+- Đã thực hiện được việc sử dụng props và state để thực hiện hành động tích chọn
+Một số điểm cần lưu ý:
+- Phần truyền props vô card và banner nên truyền cả item vô thay vì truyền từ thuộc tính của item
+- Code thực hiện mới chỉ đáp ứng được yêu cầu đề bài chứ chưa thực sự sạch sẽ, clean và tốt
+- showBanner1 để show lại với banner2 để hiển thị kiểu khác
+(điểm cộng khi thay đổi giao diện để hiển thị oke hơn, do đề bài cho thiếu hình của các banner phía dưới)
+Nhưng để mà đúng và hợp lý là chỉ hiển thị như lúc đầu, nếu chọn thì vẫn hiển thị như vậy và ảnh sẽ scale để
+vừa khung hình
+
+8

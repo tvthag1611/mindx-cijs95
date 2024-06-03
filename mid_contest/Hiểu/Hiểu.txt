@@ -1,0 +1,6 @@
+- Chưa code được giống design
+- Code gửi thiếu, chỉ có file component
+- Có hiểu về react, sử dụng được props, state, biết chưa component, nhưng đang làm theo cá nhân, chưa theo sát
+những gì đã học trên lớp (Có thể do không tham gia học trên lớp nhiều)
+
+3
