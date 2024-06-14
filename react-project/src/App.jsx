@@ -1,20 +1,36 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "./Home";
-import Page404 from "./404";
-import Layout from "./Layout";
-import ListPosts from "./ListPosts";
-import PostDetail from "./PostDetail";
+import { privateRoutes, publicRoutes } from "./routers/routes";
+import PrivateRouter from "./routers/PrivateRouter";
+import PublicRouter from "./routers/PublicRouter";
+import GlobalProvider from "./context";
+import LayoutPage from "./components/layout/Layout";
 
 function App() {
   return (
-    <Routes>
-      <Route path="" element={<Layout />}>
-        <Route path="" element={<Home />} />
-        <Route path="posts" element={<ListPosts />} />
-        <Route path="posts/:id" element={<PostDetail />} />
-      </Route>
-      <Route path="*" element={<Page404 />} />
-    </Routes>
+    <GlobalProvider>
+      <Routes>
+        <Route path="" element={<PrivateRouter />}>
+          <Route path="" element={<LayoutPage />}>
+            {privateRoutes.map((route, index) => {
+              return (
+                <Route
+                  path={route.path}
+                  element={route.component}
+                  key={index}
+                />
+              );
+            })}
+          </Route>
+        </Route>
+        <Route path="" element={<PublicRouter />}>
+          {publicRoutes.map((route, index) => {
+            return (
+              <Route path={route.path} element={route.component} key={index} />
+            );
+          })}
+        </Route>
+      </Routes>
+    </GlobalProvider>
   );
 }
 
