@@ -4,7 +4,7 @@
 
 .app {
   display: grid;
-  background-color: white;
+  background-color: red;
   gap: 50px;
   grid-template-columns: auto auto auto auto;
   padding: 50px;
